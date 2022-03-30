@@ -7,12 +7,13 @@ public class Floor : MonoBehaviour
 {
   [SerializeField] private Vector3Int minBoardPos;
   [SerializeField] private Vector3Int maxBoardPos;
+  [SerializeField] private int contentOrder;
 
   [HideInInspector] public Tilemap tilemap;
   
   private TilemapRenderer tilemapRenderer;
-  public int contentOrder;
 
+  public int ContentOrder { get => contentOrder; }
   public int FloorOrder { get => tilemapRenderer.sortingOrder; }
 
   void Awake()
